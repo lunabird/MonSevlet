@@ -1,0 +1,38 @@
+.wxh-spinner-size{
+	width: 80px;	
+}
+#wxh-login{
+	display: inline !important; 
+	float: right !important;
+	margin-top:  
+}
+.thead-font tr th{
+	font-family:  'Microsoft YaHei';
+	font-size:15px; 
+}
+.TitleLabel{
+	font-family:  'Microsoft YaHei';
+	font-size:30px; 
+	margin-top: 30px;
+	margin-left: 30px;
+	color:white;
+}
+#AdminInfo{
+	position:relative;
+	top:-30px;
+	
+}
+.zz-float{
+	position: relative !important;
+	left: 120px !important;
+	top: 15px !important;
+	font-family: "Microsoft YaHei";
+
+}
+aside{
+	background-image: url(../img/sider.png) !important;
+}
+#header{
+	background-image: url(../img/header.png) !important;
+}
+

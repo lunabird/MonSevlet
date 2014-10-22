@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+		<title> 运行监控软件 </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Use the correct meta names below for your web application
+			 Ref: http://davidbcalhoun.com/2010/viewport-metatag 
+			 
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+		<!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.css">
+
+		<!-- SmartAdmin RTL Support is under construction
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.css"> -->
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/demo.css">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<style>
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+svg{
+	/*background-color:black;*/
+}
+
+</style>
+	</head>
+	<body class="">
+		<!-- possible classes: minified, fixed-ribbon, fixed-header, fixed-width-->
+
+		<!-- MAIN PANEL -->
+
+			<!-- MAIN CONTENT -->
+			<div id="main" role="main" style="width:100%;margin-left:0px">
+			<div id="content" style="height:800px">
+
+			
+
+				<div class="jarviswidget" id="wid-id-2" data-widget-editbutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="true"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+
+								-->
+								<header>
+
+									<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
+									<h2>Bar Graph </h2>
+									<div class="jarviswidget-ctrls" role="menu" style="float:right">
+										<a href="" class="button-icon jarviswidget-fullscreen-btn" rel="tooltip" data-placement="buttom" data-original-title="Fullscreen">
+											<i class="fa fa-resize-small"></i>
+										</a>
+
+									</div>
+								</header>
+
+								<!-- widget div-->
+								<div>
+
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+
+									</div>
+									<!-- end widget edit box -->
+
+
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+									<div class="svg-here" style="width:100%;height:100%">
+								
+										</div>
+										
+									</div>
+									<!-- end widget content -->
+
+								</div>
+								<!-- end widget div -->
+
+							</div>
+							
+				<!-- end widget grid -->
+
+			</div>
+			</div>
+
+<div  class="page2 dialog-message" title="Dialog Simple Title" style="">
+				<div class="row">
+					<article class="col-lg-12">
+						<div class="jarviswidget" id="wid-id-5" data-widget-editbutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
+									<h2>CPU和内存占用率（%）</h2>
+
+								</header>
+
+								<!-- widget div-->
+								<div>
+
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+
+									</div>
+									<!-- end widget edit box -->
+
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+
+										<div id="area-graph-1" class="chart no-padding" style="height:150px"></div>
+
+									</div>
+									<!-- end widget content -->
+
+								</div>
+								<!-- end widget div -->
+
+						</div>
+					</article>
+					<article class="col-lg-12">
+						
+						<div class="jarviswidget" id="wid-id-3" data-widget-editbutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
+									<h2>硬盘实时占用情况</h2>
+
+								</header>
+
+								<!-- widget div-->
+								<div>
+
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+
+									</div>
+									<!-- end widget edit box -->
+
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+
+										<div id="area-graph-2" class="chart no-padding" style="height:150px"></div>
+
+									</div>
+									<!-- end widget content -->
+
+								</div>
+								<!-- end widget div -->
+
+							</div>
+					</article>
+				</div>
+
+				<div class="hr hr-12 hr-double"></div>
+
+		
+		    </div>	
+		     <div  class="page3 dialog-message" title="Dialog Simple Title" style="">
+				
+				<div class="row">
+					<article class="col-lg-12">
+						<div class="jarviswidget" id="wid-id-2" data-widget-editbutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
+									<h2>服务访问量</h2>
+
+								</header>
+
+								<!-- widget div-->
+								<div>
+
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+
+									</div>
+									<!-- end widget edit box -->
+
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+
+										<div id="area-graph" class="chart no-padding" style="height:150px"></div>
+
+									</div>
+									<!-- end widget content -->
+
+								</div>
+								<!-- end widget div -->
+
+							</div>
+					</article>
+					<article class="col-lg-12">
+						<div class="jarviswidget" id="wid-id-1" data-widget-editbutton="false">
+								
+								<header>
+									<span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
+									<h2>服务响应时间</h2>
+
+								</header>
+
+								<!-- widget div-->
+								<div>
+
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+
+									</div>
+									<!-- end widget edit box -->
+
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+
+										<div id="bar-chart" class="chart" style="height:140px"></div>
+
+									</div>
+									<!-- end widget content -->
+
+								</div>
+								<!-- end widget div -->
+
+							</div>
+					</article>
+				</div>
+			<div class="hr hr-12 hr-double"></div>
+
+		
+		    </div>	
+
+</div>
+			<!-- END MAIN CONTENT -->
+
+
+		<!-- END MAIN PANEL -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+
+
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+			}
+		</script>
+
+		
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+		<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+		<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
+		<script src="js/plugin/flot/jquery.flot.cust.js"></script>
+		<script src="js/plugin/flot/jquery.flot.resize.js"></script>
+		<script src="js/plugin/flot/jquery.flot.fillbetween.min.js"></script>
+		<script src="js/plugin/flot/jquery.flot.orderBar.js"></script>
+		<script src="js/plugin/flot/jquery.flot.pie.js"></script>
+		<script src="js/plugin/flot/jquery.flot.tooltip.js"></script>
+
+		<!-- BOOTSTRAP JS -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+		<!-- SPARKLINES -->
+		<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="js/plugin/fastclick/fastclick.js"></script>
+
+		<!--[if IE 7]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- Demo purpose only -->
+		<script src="js/demo.js"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="js/app.js"></script>
+
+		<!-- PAGE RELATED PLUGIN(S) -->
+
+		<!-- Morris Chart Dependencies -->
+		<script src="js/plugin/morris/raphael.2.1.0.min.js"></script>
+		<script src="js/plugin/morris/morris.min.js"></script>
+		<script src="js/d3.min.js" type="text/javascript"></script>
+		<script src="js/topology.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			// PAGE RELATED SCRIPTS
+
+			/*
+			 * Run all morris chart on this page
+			 */
+			$(document).ready(function() {
+
+				Topology.init();
+			
+				// DO NOT REMOVE : GLOBAL FUNCTIONS!
+				pageSetUp();
+				var a = $("#wid-id-2 header div a.jarviswidget-fullscreen-btn").attr("href","monitor1.html");
+				$("#wid-id-2 header div a.jarviswidget-fullscreen-btn").removeClass('jarviswidget-fullscreen-btn');
+			//alert(a);
+			});
+
+			//setup_flots();
+			/* end flot charts */
+			$.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+				_title : function(title) {
+					if (!this.options.title) {
+						title.html("&#160;");
+					} else {
+						title.html(this.options.title);
+					}
+				}
+			}));
+		
+			/*
+			* DIALOG HEADER ICON
+			*/
+		
+			// Modal Link
+		
+			$(".page2").dialog({
+				autoOpen : false,
+				modal : true,
+				title : "<div class='widget-header'><h4><i class='icon-ok'></i>节点详细信息</h4></div>"	
+			});
+			$(".page3").dialog({
+				autoOpen : false,
+				modal : true,
+				title : "<div class='widget-header'><h3><i class='icon-ok'></i> 服务详细信息</h3></div>"	
+			});
+				
+			/*
+			 * Remove focus from buttons
+			 */
+			$('.ui-dialog :button').blur();
+			
+		</script>
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</body>
+
+</html>

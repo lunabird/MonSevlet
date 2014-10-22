@@ -1,0 +1,4 @@
+#Mon Aug 11 10:59:58 CST 2014
+eclipse.preferences.version=1
+validator.Checked=WebRoot/js/libs,WebRoot/js/d3.min.js
+validator.Unchecked=

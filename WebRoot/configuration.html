@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+		<title> 运行监控软件 </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Use the correct meta names below for your web application
+			 Ref: http://davidbcalhoun.com/2010/viewport-metatag 
+			 
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+		<!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.css">
+
+		<!-- SmartAdmin RTL Support is under construction
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.css"> -->
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/demo.css">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		
+		<!-- 自己加的 -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/wxh.css">
+		
+		<!-- GOOGLE FONT -->
+		<!--  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">-->
+		<style>
+		body{
+			font-family: "Microsoft YaHei" !important;
+		}
+		.node {
+		  stroke: #fff;
+		  stroke-width: 1.5px;
+		}
+		
+		.link {
+		  stroke: #999;
+		  stroke-opacity: .6;
+		}
+		
+		svg{
+			/*background-color:black;*/
+		}
+		
+		</style>
+	</head>
+	<body class="">
+		<!-- possible classes: minified, fixed-ribbon, fixed-header, fixed-width-->
+
+		<header id="header" style="height:100px;">
+			<div id="logo-group" style="width:100%;">
+
+				<!-- PLACE YOUR LOGO HERE -->
+				<span id="logo" style="width:350px;color:white;font-size:21px;font-family:  'Microsoft YaHei' ;"> <img src="img/logo-splash.png" alt="SmartAdmin" style="height:80px;width:80px;">    一体化栅格服务集成平台</span>
+				<!-- END LOGO PLACEHOLDER -->
+
+				<!-- Note: The activity badge color changes when clicked and resets the number to 0
+				Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
+				<span id="activity" class="activity-dropdown" style="margin-top:40px;float:right;position:relative;left:-120px;"> <i class="glyphicon glyphicon-bell txt-color-blue"></i> <b class="badge"> 21 </b> </span>
+
+				<!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
+				<div class="ajax-dropdown" style="margin-left:79%;margin-top:20px;">
+
+					<!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications" -->
+					<div class="btn-group btn-group-justified" data-toggle="buttons">
+						<label class="btn btn-default">
+							<input type="radio" name="activity" id="ajax/notify/mail.html">
+							Msgs (14) </label>
+						<label class="btn btn-default">
+							<input type="radio" name="activity" id="ajax/notify/notifications.html">
+							notify (3) </label>
+						<label class="btn btn-default">
+							<input type="radio" name="activity" id="ajax/notify/tasks.html">
+							Tasks (4) </label>
+					</div>
+
+					<!-- notification content -->
+					<div class="ajax-notifications custom-scroll">
+
+						<div class="alert alert-transparent">
+							<h4>Click a button to show messages here</h4>
+							This blank page message helps protect your privacy, or you can show the first message here automatically.
+						</div>
+
+						<i class="fa fa-lock fa-4x fa-border"></i>
+
+					</div>
+					<!-- end notification content -->
+
+					<!-- footer: refresh area -->
+					<span> Last updated on: 12/12/2013 9:43AM
+						<button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Loading..." class="btn btn-xs btn-default pull-right">
+							<i class="fa fa-refresh"></i>
+						</button> </span>
+					<!-- end footer -->
+
+				</div>
+				<label class="TitleLabel">运行监控</label>
+				<!-- END AJAX-DROPDOWN -->
+			</div>
+
+			<!-- projects dropdown -->
+			
+			<!-- end projects dropdown -->
+
+			
+			<!-- pulled right: nav area -->
+			<div class="pull-right">
+
+				<!-- collapse menu button -->
+				
+				<!-- end collapse menu -->
+
+				<!-- logout button -->
+				
+				<!-- end logout button -->
+
+				<!-- search mobile button (this is hidden till mobile view port) -->
+				
+				<!-- end search mobile button -->
+
+				<!-- input: search field -->
+				
+				<!-- end input: search field -->
+
+				<!-- multiple lang dropdown : find all flags in the image folder -->
+				<ul class="header-dropdown-list hidden-xs" id="AdminInfo">
+					<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img alt="" src="img/avatar1_small.jpg"> <span> Admin </span> <i class="fa fa-angle-down"></i> </a>
+						<ul class="dropdown-menu pull-right">
+							<li>
+								<a href="javascript:void(0);"><i class="fa fa-move"></i>&nbsp;&nbsp;全屏 </a>
+							</li>
+							<li>
+								<a href="javascript:void(0);"><i class="fa fa-lock"></i>&nbsp;&nbsp;&nbsp;锁定屏幕 </a>
+							</li>
+							<li>
+								<a href="javascript:void(0);"><i class="fa fa-key"></i>&nbsp;&nbsp;退出 </a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- end multiple lang -->
+
+			</div>
+			
+			
+			<!-- end pulled right: nav area -->
+
+		</header>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<aside id="left-panel" style="top:100px;min-height:877px !important;">
+			<!-- min-height:789px !important; -->
+			<!-- User info -->
+			<!-- <div class="login-info">
+				<span>
+					
+					<a href="javascript:void(0);" id="show-shortcut">
+						<img src="" alt="" class="online" /> 
+						<span>
+							
+						</span>
+						<i class="fa fa-angle-down"></i>
+					</a> 
+					
+				</span>
+			</div>  -->
+			<!-- end user info -->
+
+			<!-- NAVIGATION : This navigation is also responsive
+
+			To make this navigation dynamic please make sure to link the node
+			(the reference to the nav > ul) after page load. Or the navigation
+			will not initialize.
+			-->
+			<nav>
+				<!-- NOTE: Notice the gaps after each icon usage <i></i>..
+				Please note that these links work a bit different than
+				traditional hre="" links. See documentation for details.
+				-->
+
+				<ul>
+					<li>
+						<a href="monitor1.html"><i class="fa fa-lg fa-fw fa-sitemap"></i> <span class="menu-item-parent" style="font-size:16px;">监控概览</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i> <span class="menu-item-parent" style="font-size:16px;">详细信息</span></a>
+						<ul>
+							<li>
+								<a href="serviceInfo.html">服务信息</a>
+							</li>
+							<li>
+								<a href="nodeInfo.html">节点信息</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="warning.html"><i class="fa fa-lg fa-fw fa-exclamation-triangle"></i> <span class="menu-item-parent" style="font-size:16px;">警报中心</span></a>
+					</li>
+					<li class="active">
+						<a href="configuration.html"><i class="fa fa-lg fa-fw fa-gear"></i> <span class="menu-item-parent" style="font-size:16px;">参数配置</span></a>
+					</li>
+					
+				</ul>
+			</nav>
+			<span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+
+		</aside>
+		<!-- END NAVIGATION -->
+
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main" style="font-family:'Microsoft YaHei'">
+
+			<!-- RIBBON -->
+			<!-- <div id="ribbon">
+			
+				<span class="ribbon-button-alignment"> <span id="refresh" class="btn btn-ribbon" data-title="refresh"  rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true"><i class="fa fa-refresh"></i></span> </span>
+			
+				breadcrumb
+				<ol class="breadcrumb">
+					<li>监控概览</li>
+				</ol>
+				end breadcrumb
+			
+				You can also add more buttons to the
+				ribbon for further usability
+			
+				Example below:
+			
+				<span class="ribbon-button-alignment pull-right">
+				<span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+				<span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+				<span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+				</span>
+			
+			</div> -->
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+						<h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-gear"></i> 参数配置 </h1>
+					</div>
+				</div>
+				<section id="widget-grid" class="">
+				<div class="row">
+					<article class="col-sm-12">
+						<div class="alert alert-success fade in">
+						
+						<i class="fa-fw fa"></i>
+						<strong>&nbsp</strong>
+						<a style="float:right;position:relative;top:-6px;" class="btn btn-primary btn-sm" href="javascript:void(0);" onclick="sendValue()">确定</a>
+						</div>
+
+					</article>
+				</div>
+				<div class="row">
+					<article class="col-sm-12">
+						<div class="jarviswidget jarviswidget-color-darken" id="wid-id-10" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-deletebutton="false">
+								<!-- widget options:
+								usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+				
+								data-widget-colorbutton="false"
+								data-widget-editbutton="false"
+								data-widget-togglebutton="false"
+								data-widget-deletebutton="false"
+								data-widget-fullscreenbutton="false"
+								data-widget-custombutton="false"
+								data-widget-collapsed="true"
+								data-widget-sortable="false"
+				
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+									<h2>参数配置</h2>
+				
+								</header>
+				
+								<!-- widget div-->
+								<div>
+				
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+				
+									</div>
+									<!-- end widget edit box -->
+				
+									<!-- widget content -->
+									<div class="widget-body">
+				
+										
+				
+											<fieldset>
+												
+												<div class="row">
+													
+													<div class="col-sm-4">
+														<legend>
+														采样时间间隔（秒）
+														</legend>
+														<input type="text" class="slider slider-warning" id="sa1" value="" 
+														data-slider-min="10" 
+														data-slider-max="30"  
+														data-slider-value="15" 
+														data-slider-selection = "before"
+														data-slider-handle="squar">
+													</div>
+													<div class="col-sm-4">
+														<legend>
+														响应时间（毫秒）
+														</legend>
+														<input type="text" class="slider slider-warning" id="sa2" value="" 
+														data-slider-min="1" 
+														data-slider-max="1000"  
+														data-slider-value="500" 
+														data-slider-selection = "before"
+														data-slider-handle="squar">
+													</div>
+													<div class="col-sm-4">
+														<legend>
+														服务并发数设置
+														</legend>
+														<input type="text" class="slider slider-warning" id="sa3" value="" 
+														data-slider-min="10" 
+														data-slider-max="100"  
+														data-slider-value="50" 
+														data-slider-selection = "before"
+														data-slider-handle="squar">
+													</div>
+												</div>
+				
+											</fieldset>
+											<fieldset>
+												
+												<div class="row">
+													
+													<div class="col-sm-4">
+														<legend>
+														CPU占用率（%）
+														</legend>
+														<div>
+															<input class="knob" data-width="120" data-height="120" data-displayInput=true value="100" data-displayPrevious=true data-fgColor="blue" id="ra1">
+														</div>
+				
+													</div>
+													<div class="col-sm-4">
+														<legend>
+														内存占用率（%）
+														</legend>
+														<div>
+															<input class="knob" data-width="120" data-height="120" data-displayInput=true value="100" data-displayPrevious=true data-fgColor="green" id="ra2">
+														</div>
+													</div>
+													<div class="col-sm-4">
+														<legend>
+														硬盘占用率（%）
+														</legend>
+														<div>
+															<input class="knob" data-width="120" data-height="120" data-displayInput=true value="100" data-displayPrevious=true data-fgColor="red" id="ra3">
+														</div>
+													</div>
+												</div>
+				
+											</fieldset>
+				
+									</div>
+									<!-- end widget content -->
+				
+								</div>
+								<!-- end widget div -->
+				
+							</div>
+							<!-- end widget -->
+
+					</article>
+				</div>
+
+				</section>
+				
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+		Note: These tiles are completely responsive,
+		you can add as many as you like
+		-->
+		<div id="shortcut">
+			<ul>
+				<li>
+					<a href="#inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
+				</li>
+				<li>
+					<a href="#calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
+				</li>
+				<li>
+					<a href="#gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
+				</li>
+				<li>
+					<a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+				</li>
+				<li>
+					<a href="#gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
+				</li>
+			</ul>
+		</div>
+		<!-- END SHORTCUT AREA -->
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="js/libs/jquery.min.js"></script>
+
+		<script src="js/libs/jquery-2.0.2.min.js"></script>
+		<script src="js/libs/jquery-ui.min.js"></script>
+		<script src="js/libs/jquery-ui-1.10.3.min.js"></script>
+
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+		<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+		<!-- BOOTSTRAP JS -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+		<!-- SPARKLINES -->
+		<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="js/plugin/fastclick/fastclick.js"></script>
+
+		<!--[if IE 7]>
+
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- Demo purpose only -->
+		<script src="js/demo.js"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script src="js/app.js"></script>
+		
+		<!-- PAGE RELATED PLUGIN(S) -->
+		
+		<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
+		<script src="js/plugin/maxlength/bootstrap-maxlength.min.js"></script>
+		<script src="js/plugin/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+		<script src="js/plugin/bootstrap-tags/bootstrap-tagsinput.min.js"></script>
+		<script src="js/plugin/noUiSlider/jquery.nouislider.min.js"></script>
+		<script src="js/plugin/ion-slider/ion.rangeSlider.min.js"></script>
+		<script src="js/plugin/colorpicker/bootstrap-colorpicker.min.js"></script>
+		<script src="js/plugin/knob/jquery.knob.min.js"></script>
+		<script src="js/plugin/x-editable/moment.min.js"></script>
+		<script src="js/plugin/x-editable/jquery.mockjax.min.js"></script>
+		<script src="js/plugin/x-editable/x-editable.min.js"></script>
+		<script src="js/plugin/typeahead/typeahead.min.js"></script>
+		<script src="js/plugin/typeahead/typeaheadjs.min.js"></script>
+		<script type="text/javascript" src="js/add/configuration.js"></script>
+		<!-- /*<script src="js/d3.min.js" type="text/javascript"></script>
+		<script src="js/add/monitor.js" type="text/javascript"></script>
+		<script src="js/add/topology.js" type="text/javascript"></script>*/ -->
+		
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</body>
+
+</html>

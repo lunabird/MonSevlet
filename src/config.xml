@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Body> 
+ <center_IP>192.168.0.204</center_IP>  
+ <center_Port>5000</center_Port>  
+ <mon_UDPLSN_PORT>4800</mon_UDPLSN_PORT>  
+ <liminal> 
+  <cpu>100</cpu>  
+  <ram>100</ram>  
+  <hdd>100</hdd> 
+ </liminal> 
+ <filePath>D:\\curInfo.txt</filePath>
+</Body>

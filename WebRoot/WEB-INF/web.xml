@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_2_pre_fwxx_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_2_pre_fwxx_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_3_fwxq_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_3_fwxq_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_3_12_fwxq_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_3_12_fwxq_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_2_fwxx_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_2_fwxx_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_1_jkgl_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_1_jkgl_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_4_jdxx_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_4_jdxx_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_5_jdxq_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_5_jdxq_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_6_jblb_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_6_jblb_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceListPageup</servlet-name>
+    <servlet-class>newServlet.serviceListPageup</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeListServlet</servlet-name>
+    <servlet-class>newServlet.nodeListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeHarddisk</servlet-name>
+    <servlet-class>newServlet.nodeHarddisk</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeCpuMem</servlet-name>
+    <servlet-class>newServlet.nodeCpuMem</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_4_Table_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_4_Table_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>filterWarn</servlet-name>
+    <servlet-class>newServlet.filterWarn</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeDetail</servlet-name>
+    <servlet-class>newServlet.nodeDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceDetail</servlet-name>
+    <servlet-class>newServlet.serviceDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>inputSession</servlet-name>
+    <servlet-class>newServlet.inputSession</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToPolgyServlet</servlet-name>
+    <servlet-class>newServlet.ToPolgyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_1_littlePic_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_1_littlePic_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_1_topolgy_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_1_topolgy_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>filter</servlet-name>
+    <servlet-class>newServlet.filter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>filterServiceServlet</servlet-name>
+    <servlet-class>newServlet.filterServiceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_6_jbcl_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_6_jbcl_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yxjk_3_7_cspz_Servlet</servlet-name>
+    <servlet-class>newServlet.yxjk_3_7_cspz_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getNumber</servlet-name>
+    <servlet-class>newServlet.getNumber</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getFilterNumber</servlet-name>
+    <servlet-class>newServlet.getFilterNumber</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeFilterFirst</servlet-name>
+    <servlet-class>newServlet.nodeFilterFirst</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeFilter</servlet-name>
+    <servlet-class>newServlet.nodeFilter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>alarmFilterFirst</servlet-name>
+    <servlet-class>newServlet.alarmFilterFirst</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getLogNumber</servlet-name>
+    <servlet-class>newServlet.getLogNumber</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getLogNumber2</servlet-name>
+    <servlet-class>newServlet.getLogNumber2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_2_pre_fwxx_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_2_pre_fwxx_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_3_fwxq_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_3_fwxq_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_3_12_fwxq_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_3_12_fwxq_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_2_fwxx_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_2_fwxx_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_1_jkgl_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_1_jkgl_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_4_jdxx_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_4_jdxx_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_5_jdxq_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_5_jdxq_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_6_jblb_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_6_jblb_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceListPageup</servlet-name>
+    <url-pattern>/newServlet/serviceListPageup</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeListServlet</servlet-name>
+    <url-pattern>/newServlet/nodeListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeHarddisk</servlet-name>
+    <url-pattern>/newServlet/nodeHarddisk</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeCpuMem</servlet-name>
+    <url-pattern>/newServlet/nodeCpuMem</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_4_Table_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_4_Table_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>filterWarn</servlet-name>
+    <url-pattern>/newServlet/filterWarn</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeDetail</servlet-name>
+    <url-pattern>/newServlet/nodeDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceDetail</servlet-name>
+    <url-pattern>/newServlet/serviceDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>inputSession</servlet-name>
+    <url-pattern>/newServlet/inputSession</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToPolgyServlet</servlet-name>
+    <url-pattern>/newServlet/ToPolgyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_1_littlePic_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_1_littlePic_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_1_topolgy_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_1_topolgy_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>filter</servlet-name>
+    <url-pattern>/newServlet/filter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>filterServiceServlet</servlet-name>
+    <url-pattern>/newServlet/filterServiceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_6_jbcl_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_6_jbcl_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yxjk_3_7_cspz_Servlet</servlet-name>
+    <url-pattern>/newServlet/yxjk_3_7_cspz_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getNumber</servlet-name>
+    <url-pattern>/newServlet/getNumber</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getFilterNumber</servlet-name>
+    <url-pattern>/newServlet/getFilterNumber</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeFilterFirst</servlet-name>
+    <url-pattern>/newServlet/nodeFilterFirst</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeFilter</servlet-name>
+    <url-pattern>/newServlet/nodeFilter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>alarmFilterFirst</servlet-name>
+    <url-pattern>/newServlet/alarmFilterFirst</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getLogNumber</servlet-name>
+    <url-pattern>/newServlet/getLogNumber</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getLogNumber2</servlet-name>
+    <url-pattern>/newServlet/getLogNumber2</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <description>Socket服务随web启动而启动</description>
+    <listener-class>newServlet.yxjk_ServerSocketListener</listener-class>
+  </listener>
+</web-app>
